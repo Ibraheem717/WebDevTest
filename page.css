@@ -80,3 +80,26 @@ video {
     width: 100%;
     height: auto;
   }
+
+.desc_form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.desc_form textarea {
+    padding: 10px;
+}
+
+
+button {
+    background-color: #6F1D1B;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFE6A7;
+}

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="page.css">
+    <script src="page.js"></script>
 </head>
 
 <body class="main">
@@ -22,47 +23,97 @@
                     <th width="250"> <strong>Book </strong></th>
                     <th width="200"><strong>Rating</strong></th>
                     <th width="100"><strong>Image</strong></th>
+                    <th width="250"><strong>Description</strong></th>
                 </tr>
                 <tr>
                     <td>WORM</td>
                     <td>6/10</td>
                     <td><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1519662877i/18713259.jpg" alt="Not available" width="100" height="133"></td>
+                    <td id="data1">
+                        <form class="desc_form" onsubmit="return addDescription('desc1', 'data1')" method="post">
+                            <label for="desc1">Description:</label>
+                            <textarea rows="4" name="desc" id="desc1"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td>Mother of Learning</td>
                     <td>9/10</td>
                     <td><img src="https://www.royalroadcdn.com/public/covers-full/21220-mother-of-learning.jpg?time=1637247458" alt="Not available"  width="100" height="133"></td>
+                    <td id="data2">
+                        <form class="desc_form" onsubmit="return addDescription('desc2', 'data2')" method="post">
+                            <label for="desc2">Description:</label>
+                            <textarea rows="4" name="desc" id="desc2"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td>A Simple Path to Wealth</td>
                     <td>Didn't finish</td>
                     <td><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpCTmLx7xwpjL8rLdmrd8ajJogVDhgqPoPLe9u20fYfpHS4ZyJ" alt="Not available" width="100" height="133"></td>
+                    <td id="data3">
+                        <form class="desc_form" onsubmit="return addDescription('desc3', 'data3')" method="post">
+                            <label for="desc3">Description:</label>
+                            <textarea rows="4" name="desc" id="desc3"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td>A Song of Ice and Fire</td>
                     <td>6/10</td>
                     <td><img src="https://assets-prd.ignimgs.com/2022/11/01/fire-1667333281590.jpg?height=220" alt="Not available" width="100" height="133"></td>
+                    <td id="data4">
+                        <form class="desc_form" onsubmit="return addDescription('desc4', 'data4')" method="post">
+                            <label for="desc4">Description:</label>
+                            <textarea rows="4" name="desc" id="desc4"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td>Overlord</td>
                     <td>8/10</td>
                     <td><img src="https://cdn.novelupdates.com/images/2017/11/overlord_ln.jpeg" alt="Not available" width="100" height="133"></td>
+                    <td id="data5">
+                        <form class="desc_form" onsubmit="return addDescription('desc5', 'data5')" method="post">
+                            <label for="desc5">Description:</label>
+                            <textarea rows="4" name="desc" id="desc5"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td>The Beginning After the End</td>
                     <td>3/10</td>
                     <td><img src="https://static.lightnovelcave.com/bookcover/300x400/00548-the-beginning-after-the-end.jpg" alt="Not available" width="100" height="133"></td>
+                    <td id="data6">
+                        <form class="desc_form" onsubmit="return addDescription('desc6', 'data6')" method="post">
+                            <label for="desc6">Description:</label>
+                            <textarea rows="4" name="desc" id="desc6"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="last_row" colspan="3"> <p class="same_row">&#128512</p> <p class="same_row" id="hidden"> Abbra Cadabra </p> </td>
+                    <td class="last_row" colspan="4"> <p class="same_row">&#128512</p> <p class="same_row" id="hidden"> Abbra Cadabra </p> </td>
                 </tr>
             </table>
         </section>
     
         <figure>
-            <video controls>
-                <source src="ItemSpawnerGlitch.mp4" type="video/mp4">
-            </video>
+            <form>
+                <label for="vid">Input new file</label>
+                <input id="vid" type="file" accept="video/mp4">
+                <button type="button" onclick="changeVideo('vidLoc', 'vid')">Submit</button>
+            </form>
+            <sub>
+                <video id="vidLoc" controls>
+                    <source src="ItemSpawnerGlitch.mp4" type="video/mp4">
+                </video>
+            </sub>            
         </figure>
 
     </div>
